@@ -48,7 +48,8 @@ export async function POST(request: Request) {
     // Automatically appends a new row to Longview Capital's Google Sheet
     const sheetsWebhookUrl =
       process.env.GOOGLE_SHEETS_WEBHOOK_URL ||
-      process.env.GOOGLE_SHEET_WEBHOOK_URL;
+      process.env.GOOGLE_SHEET_WEBHOOK_URL ||
+      "https://script.google.com/macros/s/AKfycbwOTkHwGXmb2gqvXPDATviDbUsLhMXYtikngAuwb0PShYWr5EJn_9kKzNIRgKgkWLuf/exec";
 
     if (sheetsWebhookUrl) {
       try {
