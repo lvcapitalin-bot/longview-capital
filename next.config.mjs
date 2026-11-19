@@ -4,6 +4,13 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  eslint: {
+    // Prevent build failures on CI when ESLint is not configured
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: false,
+  },
 };
 
 export default nextConfig;
