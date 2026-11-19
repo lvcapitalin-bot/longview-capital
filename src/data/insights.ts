@@ -146,5 +146,109 @@ export const INSIGHTS_ARTICLES: Article[] = [
       "Valuation determines your entry price, but moat durability determines your ultimate destination."
     ],
     disclosure: "Disclaimer: Educational content prepared for Longview Capital research subscribers and prospective investors. Not an offer to trade securities."
+  },
+  {
+    slug: "what-is-fundamental-stock-research-indian-equities",
+    title: "What is Fundamental Stock Research? A Complete Primer for Long-Term Investors in India",
+    category: "Investment Education",
+    date: "November 18, 2026",
+    readTime: "7 min read",
+    author: "Harsh Nenwani",
+    authorRole: "Research Analyst",
+    excerpt: "A structured overview of how fundamental equity research evaluates real-world commercial economics, balance sheet durability, and corporate moats in Indian financial markets.",
+    featured: true,
+    coverImage: "/images/insights/fundamental-research.svg",
+    tags: ["Fundamental Analysis", "Equity Research India", "Balance Sheet", "Long-Term Investing"],
+    content: [
+      "Fundamental stock research is the disciplined process of evaluating a company's financial health, competitive advantages, industry positioning, and management stewardship to determine its intrinsic business value. Unlike technical analysis or momentum trading—which study historical price charts and market psychology—fundamental analysis treats an equity share as a fractional deed of ownership in a real-world operating business.",
+      "In Indian financial markets, where corporate governance standards vary widely across listed entities, fundamental research serves as both a growth engine and a capital preservation shield. It separates businesses that manufacture accounting profits on paper from those that generate genuine cash profits.",
+      "At Longview Capital, our fundamental analysis framework rests on four core pillars: (1) Business Quality & Moat Evaluation—does the business possess pricing power, high customer switching costs, or network effects? (2) Financial Statement Scrutiny—examining 5 to 10 years of balance sheets, operating cash flows, working capital cycles, and debt obligations; (3) Promoter Integrity & Capital Allocation—evaluating whether leadership reinvests retained earnings at incremental returns (ROCE) above 18-20% or squanders capital on unrelated vanity projects; and (4) Valuation Discipline—calculating a conservative intrinsic value to ensure a margin of safety.",
+      "By adopting a rigorous fundamental research process, investors transition from passive gamblers hoping for tomorrow's price uptick to informed business owners compounding wealth over multi-year marathons."
+    ],
+    keyTakeaways: [
+      "An equity share represents fractional business ownership, not a speculative ticker.",
+      "Fundamental analysis focuses on business quality, financial statements, promoter governance, and valuation.",
+      "Forensic scrutiny of cash flows protects investors from corporate accounting manipulation.",
+      "Patient capital combined with fundamental conviction is the most reliable driver of multi-year compounding."
+    ],
+    disclosure: "Disclaimer: This analytical commentary is strictly for educational purposes and does not constitute individual financial or investment advice. SEBI Research Analyst registration in process."
+  },
+  {
+    slug: "small-cap-vs-mid-cap-investing-india",
+    title: "Small-Cap vs Mid-Cap Stocks in India: A Framework for Long-Term Opportunity and Risk",
+    category: "Small & Mid Cap Research",
+    date: "November 15, 2026",
+    readTime: "8 min read",
+    author: "Harsh Nenwani",
+    authorRole: "Research Analyst",
+    excerpt: "Why emerging small and mid-sized enterprises offer superior compounding runways—and the forensic accounting checks needed to avoid corporate governance value traps.",
+    featured: true,
+    coverImage: "/images/insights/small-mid-cap.svg",
+    tags: ["Small Caps", "Mid Caps", "Indian Markets", "Forensic Accounting"],
+    content: [
+      "India's economic growth trajectory creates a continuous pipeline of emerging category leaders. As industrial supply chains localize, domestic consumption expands, and specialized manufacturing scales, small-cap (companies ranked 251st and below by market capitalization) and mid-cap (ranked 101st to 250th) stocks frequently offer significantly longer compounding runways than saturated large-cap incumbents.",
+      "However, the small and mid-cap space is asymmetric. While top-quartile performers can compound earnings at 20-25% annually over 5 years, bottom-quartile companies often suffer catastrophic permanent capital impairment due to overleveraged balance sheets, sudden customer concentration losses, or promoter governance malpractices.",
+      "To navigate this asset class successfully, Longview Capital applies a strict forensic filter before considering any business: (1) Debt-to-Equity below 0.5x with interest coverage exceeding 4x; (2) Zero or negligible promoter share pledging; (3) Positive cumulative free cash flow over 5 years; and (4) Transparent related-party transactions.",
+      "When an investor identifies a small or mid-cap firm with a widening economic moat, prudent balance sheet stewardship, and fair valuation, the compounding reward over a 3 to 5-year horizon can be transformative."
+    ],
+    keyTakeaways: [
+      "Small and mid-caps offer higher growth potential but demand significantly higher forensic scrutiny.",
+      "Governance risk and debt over-leverage are the primary causes of permanent capital loss in smaller companies.",
+      "Insist on low promoter pledging, interest coverage above 4x, and free cash flow generation.",
+      "A 3–5+ year holding horizon allows quality small and mid-caps to reflect underlying earnings growth."
+    ],
+    disclosure: "Disclaimer: This publication is meant solely for educational and research evaluation. Investment in equities involves market risks."
+  },
+  {
+    slug: "why-valuation-matters-in-long-term-investing",
+    title: "Why Valuation Matters in Long-Term Investing: Margin of Safety and Avoiding High-P/E Traps",
+    category: "Company Analysis",
+    date: "November 08, 2026",
+    readTime: "6 min read",
+    author: "Sunny Nenwani",
+    authorRole: "Financial Analyst",
+    excerpt: "Even an exceptional business can prove to be a disastrous investment if acquired at an excessive price. Here is how Longview Capital calculates a Margin of Safety before allocating capital.",
+    featured: false,
+    coverImage: "/images/insights/valuation-discipline.svg",
+    tags: ["Valuation", "Margin of Safety", "DCF", "Price-to-Earnings"],
+    content: [
+      "One of the most dangerous fallacies in modern investing is the belief that 'a great company is always a great investment regardless of price.' In reality, investment return is a function of two distinct variables: the earnings growth of the underlying business, and the change in the valuation multiple paid for those earnings.",
+      "When an investor purchases a company trading at 80x or 100x Price-to-Earnings (P/E), the market has already priced in flawless execution for the next decade. If that company's revenue growth decelerates from 25% to 15%, the valuation multiple often compresses violently from 80x down to 40x. Even though earnings grew, the investor experiences zero or negative stock price appreciation over multiple years—a phenomenon known as multiple compression.",
+      "At Longview Capital, we anchor our investment framework in Benjamin Graham's concept of the 'Margin of Safety.' We demand that entry prices reflect conservative assumptions about terminal growth, operating margins, and discount rates.",
+      "Valuation discipline requires emotional fortitude. It means walking away from hyped market darlings and patiently waiting for temporary pessimism or market mispricings to present quality franchises at sensible valuations."
+    ],
+    keyTakeaways: [
+      "Price is what you pay; value is what you get. Never confuse a great business with a great investment price.",
+      "Excessive valuation multiples leave zero room for operational error or macroeconomic slowdowns.",
+      "Margin of Safety protects investors against analytical errors and unexpected business disruptions.",
+      "Patience to wait for sensible entry valuations is the hallmark of professional capital allocators."
+    ],
+    disclosure: "Disclaimer: Perspectives shared are educational principles of valuation and capital allocation, not individualized investment advice."
+  },
+  {
+    slug: "how-to-read-an-annual-report-indian-stocks",
+    title: "How to Read an Indian Company's Annual Report in 5 Steps: A Practical Checklist",
+    category: "Investment Education",
+    date: "October 20, 2026",
+    readTime: "9 min read",
+    author: "Harsh Nenwani",
+    authorRole: "Research Analyst",
+    excerpt: "Cut through 300 pages of corporate PR. Focus on the 5 sections that truly matter: Cash Flow, Related Party Transactions, Auditor's Notes, Contingent Liabilities, and Management Discussion.",
+    featured: false,
+    coverImage: "/images/insights/annual-report-guide.svg",
+    tags: ["Annual Report", "Financial Analysis", "Forensic Checklist", "Indian Stocks"],
+    content: [
+      "An Indian company's annual report often spans 250 to 400 pages, filled with marketing photographs, sustainability pledges, and public relations statements. For most individual investors, this volume of information is paralyzing.",
+      "However, professional equity analysts know that the truth of a business is concentrated in a handful of critical pages. By reading the annual report backwards—starting with notes and cash flows rather than the chairman's letter—investors uncover the real operational reality.",
+      "Step 1: Check the Independent Auditor's Report. Look for qualified opinions, 'Emphasis of Matter', or changes in key audit partners. Step 2: Examine the Cash Flow Statement. Ensure that Operating Cash Flow (CFO) is consistently positive and tracks cumulative Net Profit (PAT) over a 5-year rolling window. Step 3: Scrutinize Notes on Related Party Transactions. Are company funds being channeled to promoter-owned private entities or shell firms for 'consulting' or rent? Step 4: Inspect Contingent Liabilities and Capital Work in Progress (CWIP). Aging CWIP that never gets capitalized into revenue-producing assets is often a red flag for diverted funds. Step 5: Read the Management Discussion & Analysis (MD&A) with a skeptical lens. Compare past MD&A promises with actual subsequent execution.",
+      "Mastering this 5-step checklist transforms annual reports from intimidating documents into powerful competitive advantages for fundamental investors."
+    ],
+    keyTakeaways: [
+      "Always read the annual report backwards, starting with auditor notes and financial footnotes.",
+      "Operating cash flow must consistently support reported net profit over multi-year periods.",
+      "Related party transactions and aging CWIP are primary indicators of promoter governance risks.",
+      "Evaluate management execution against claims made in previous years' annual reports."
+    ],
+    disclosure: "Disclaimer: This analytical framework is published strictly for financial literacy and investor education purposes."
   }
 ];

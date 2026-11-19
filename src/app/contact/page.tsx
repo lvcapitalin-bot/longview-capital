@@ -10,19 +10,101 @@ import {
 import { BRAND } from "@/data/brand";
 import { ContactForm } from "@/components/ContactForm";
 
-export const metadata = {
-  title: "Contact Longview Capital | Bodakdev, Ahmedabad Office",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Longview Capital | Bodakdev, Ahmedabad Office | Direct Advisory Lines",
   description:
-    "Connect with Sunny Nenwani and Harsh Nenwani at Longview Capital in Ahmedabad. Discuss equity research subscriptions, fundamental analysis, and long-term advisory.",
+    "Connect directly with Sunny Nenwani (+91 79847 21288) and Harsh Nenwani (+91 80005 21297) at Longview Capital in Bodakdev, Ahmedabad. Discuss equity research subscriptions and fundamental stock advisory.",
+  keywords: [
+    "Contact Longview Capital",
+    "Equity research Ahmedabad office",
+    "Sunny Nenwani contact",
+    "Harsh Nenwani contact",
+    "Stock advisory Bodakdev Ahmedabad",
+    "Akash Towers Bodakdev investment firm"
+  ],
+  alternates: {
+    canonical: "https://www.lvcapital.in/contact",
+  },
+  openGraph: {
+    title: "Contact Longview Capital | Bodakdev, Ahmedabad Office",
+    description:
+      "Direct lines to Sunny Nenwani (+91 79847 21288) and Harsh Nenwani (+91 80005 21297). Bodakdev, Ahmedabad office.",
+    url: "https://www.lvcapital.in/contact",
+    type: "website",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Contact Longview Capital Ahmedabad",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Longview Capital | Bodakdev, Ahmedabad Office",
+    description: "Direct lines to Sunny Nenwani and Harsh Nenwani in Bodakdev, Ahmedabad.",
+    images: ["/images/og-image.jpg"],
+  },
 };
 
 export default function ContactPage() {
+  const contactJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "@id": "https://www.lvcapital.in/contact#webpage",
+        url: "https://www.lvcapital.in/contact",
+        name: "Contact Longview Capital",
+        description: "Official contact channels, direct advisory phone numbers, and Bodakdev office address of Longview Capital.",
+        mainEntity: {
+          "@type": "FinancialService",
+          name: "Longview Capital",
+          telephone: "+91-7984721288",
+          email: "lvcapital.in@gmail.com",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "5, First Floor, Akash Towers, Judges Bunglow Road, Bodakdev",
+            addressLocality: "Ahmedabad",
+            addressRegion: "Gujarat",
+            postalCode: "380054",
+            addressCountry: "IN",
+          },
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.lvcapital.in/contact#breadcrumb",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://www.lvcapital.in",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Contact",
+            item: "https://www.lvcapital.in/contact",
+          },
+        ],
+      },
+    ],
+  };
   const whatsappUrl = `https://wa.me/${BRAND.contact.whatsappDefaultNumber}?text=${encodeURIComponent(
     "Hello Longview Capital, I would like to enquire about your research services."
   )}`;
 
   return (
     <div className="relative bg-[#FAF8F5]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactJsonLd) }}
+      />
       {/* Main Grid: Contact Form ON TOP (mobile & desktop left), Office & Direct Lines alongside */}
       <section className="py-8 md:py-14 bg-[#FAF8F5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

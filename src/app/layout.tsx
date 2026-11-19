@@ -1,37 +1,70 @@
 import type { Metadata } from "next";
+import { Playfair_Display, Cormorant_Garamond, Manrope, Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { FAQS_DATA } from "@/data/faqs";
 
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Longview Capital | Independent Stock Research & Wealth Advisory | Ahmedabad",
+  title: "Longview Capital | Fundamental Equity Research & Stock Advisory India",
   description:
-    "Longview Capital is an independent investment research and wealth advisory firm based in Bodakdev, Ahmedabad. We empower long-term investors through fundamental equity research, balance sheet scrutiny, and patient compounding. Think. Invest. Grow.",
+    "Longview Capital is an independent investment research and wealth advisory firm in Bodakdev, Ahmedabad. We empower disciplined Indian investors through rigorous fundamental stock research, balance sheet scrutiny, small and mid-cap analysis, and patient 3–5+ year wealth compounding.",
   keywords: [
-    "Long-term investment research India",
-    "Fundamental stock research",
+    "Fundamental stock research India",
     "Equity research services India",
-    "Small and Mid Cap research Ahmedabad",
-    "Investment research Ahmedabad",
+    "Fundamental analysis of Indian stocks",
+    "Long-term investment research India",
+    "Small-cap stock research India",
+    "Mid-cap stock research India",
+    "Stock market research analyst India",
+    "Equity research Ahmedabad",
+    "Long-term investing strategies",
     "Longview Capital",
-    "SEBI Registration In Process",
     "Harsh Nenwani",
     "Sunny Nenwani",
     "Wealth Advisory Bodakdev Ahmedabad"
   ],
-  authors: [{ name: "Longview Capital" }],
+  authors: [{ name: "Longview Capital" }, { name: "Harsh Nenwani" }, { name: "Sunny Nenwani" }],
   creator: "Longview Capital",
   publisher: "Longview Capital",
   metadataBase: new URL("https://www.lvcapital.in"),
   alternates: {
-    canonical: "/",
+    canonical: "https://www.lvcapital.in",
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+    yandex: undefined,
   },
   openGraph: {
-    title: "Longview Capital | Independent Stock Research & Wealth Advisory",
+    title: "Longview Capital | Fundamental Equity Research & Stock Advisory India",
     description:
-      "Invest With Perspective. Build Wealth With Purpose. Fundamental stock research for HNIs, business owners, and professionals in Ahmedabad.",
+      "Invest With Perspective. Build Wealth With Purpose. Institutional-grade fundamental stock analysis and patient long-term equity research for HNIs, business owners, and professionals.",
     url: "https://www.lvcapital.in",
     siteName: "Longview Capital",
     locale: "en_IN",
@@ -41,13 +74,13 @@ export const metadata: Metadata = {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Longview Capital - Invest With Perspective. Build Wealth With Purpose.",
+        alt: "Longview Capital - Fundamental Equity Research & Wealth Advisory Ahmedabad",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Longview Capital | Independent Stock Research & Wealth Advisory",
+    title: "Longview Capital | Fundamental Equity Research & Stock Advisory India",
     description: "Think with clarity. Invest with conviction. Grow with patience. Bodakdev, Ahmedabad.",
     images: ["/images/og-image.jpg"],
   },
@@ -62,7 +95,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Rich Structured Schema for Google Search & AI Overviews (Google AI, Gemini, ChatGPT, Perplexity)
+  // Rich Structured Schema for Google Search, Knowledge Graph & AI Overviews (Google AI, Gemini, ChatGPT, Perplexity)
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -75,9 +108,24 @@ export default function RootLayout({
         logo: "https://www.lvcapital.in/images/logo-transparent.png",
         image: "https://www.lvcapital.in/images/og-image.jpg",
         description:
-          "Independent fundamental stock research and personalized wealth advisory firm based in Bodakdev, Ahmedabad, India. Founded by Sunny Nenwani and Harsh Nenwani. SEBI Research Analyst registration application under process.",
+          "Independent fundamental stock research and wealth advisory firm based in Bodakdev, Ahmedabad, Gujarat, India. Founded by Sunny Nenwani and Harsh Nenwani. Focus on fundamental analysis, balance sheet scrutiny, and 3-5+ year compounding.",
         telephone: "+91-7984721288",
         email: "lvcapital.in@gmail.com",
+        priceRange: "₹₹₹",
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            opens: "09:30",
+            closes: "18:30",
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: "Saturday",
+            opens: "10:00",
+            closes: "14:00",
+          },
+        ],
         address: {
           "@type": "PostalAddress",
           streetAddress: "5, First Floor, Akash Towers, Judges Bunglow Road, Bodakdev",
@@ -91,30 +139,55 @@ export default function RootLayout({
           latitude: 23.0407987,
           longitude: 72.5186673,
         },
+        hasMap: "https://maps.google.com/?cid=1234567890",
         founder: [
           {
             "@type": "Person",
             name: "Sunny Nenwani",
             jobTitle: "Financial Analyst",
             telephone: "+91-7984721288",
+            worksFor: {
+              "@id": "https://www.lvcapital.in/#organization",
+            },
           },
           {
             "@type": "Person",
             name: "Harsh Nenwani",
             jobTitle: "Research Analyst",
             telephone: "+91-8000521297",
+            worksFor: {
+              "@id": "https://www.lvcapital.in/#organization",
+            },
           },
         ],
-        areaServed: {
-          "@type": "Country",
-          name: "India",
-        },
+        areaServed: [
+          {
+            "@type": "City",
+            name: "Ahmedabad",
+          },
+          {
+            "@type": "State",
+            name: "Gujarat",
+          },
+          {
+            "@type": "Country",
+            name: "India",
+          },
+        ],
         knowsAbout: [
-          "Equity Research",
-          "Fundamental Stock Analysis",
-          "Small and Mid Cap Equities",
-          "Wealth Advisory",
-          "Portfolio Asset Allocation"
+          "Fundamental Stock Research India",
+          "Equity Research Services India",
+          "Fundamental Analysis of Indian Stocks",
+          "Small-cap Stock Research India",
+          "Mid-cap Stock Research India",
+          "Balance Sheet Scrutiny",
+          "Corporate Governance & Management Integrity",
+          "Working Capital and Cash Flow Analysis",
+          "Valuation Discipline & Margin of Safety",
+          "Long-term Wealth Compounding"
+        ],
+        sameAs: [
+          "https://wa.me/917984721288"
         ],
       },
       {
@@ -124,6 +197,11 @@ export default function RootLayout({
         name: "Longview Capital",
         publisher: {
           "@id": "https://www.lvcapital.in/#organization",
+        },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: "https://www.lvcapital.in/insights?q={search_term_string}",
+          "query-input": "required name=search_term_string",
         },
       },
       {
@@ -142,14 +220,11 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="scroll-smooth">
+    <html
+      lang="en"
+      className={`${playfair.variable} ${cormorant.variable} ${manrope.variable} ${inter.variable} scroll-smooth`}
+    >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
-          rel="stylesheet"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

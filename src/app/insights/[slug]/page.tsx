@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import {
   Calendar,
   Clock,
@@ -26,6 +27,58 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const article = INSIGHTS_ARTICLES.find((a) => a.slug === slug);
+
+  if (!article) {
+    return {
+      title: "Article Not Found | Longview Capital",
+    };
+  }
+
+  const canonicalUrl = `https://www.lvcapital.in/insights/${article.slug}`;
+
+  return {
+    title: `${article.title} | Longview Capital`,
+    description: article.excerpt,
+    keywords: [
+      ...article.tags,
+      "Fundamental stock research India",
+      "Equity research Ahmedabad",
+      "Indian stocks analysis",
+      "Longview Capital"
+    ],
+    authors: [{ name: article.author }],
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: article.title,
+      description: article.excerpt,
+      url: canonicalUrl,
+      type: "article",
+      publishedTime: new Date(article.date).toISOString(),
+      authors: [article.author],
+      tags: article.tags,
+      images: [
+        {
+          url: "/images/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.excerpt,
+      images: ["/images/og-image.jpg"],
+    },
+  };
+}
+
 export default async function ArticleDetailPage({ params }: PageProps) {
   const { slug } = await params;
   const article = INSIGHTS_ARTICLES.find((a) => a.slug === slug);
@@ -36,8 +89,74 @@ export default async function ArticleDetailPage({ params }: PageProps) {
 
   const relatedArticles = INSIGHTS_ARTICLES.filter((a) => a.slug !== slug).slice(0, 2);
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `https://www.lvcapital.in/insights/${article.slug}#article`,
+        headline: article.title,
+        description: article.excerpt,
+        datePublished: new Date(article.date).toISOString(),
+        dateModified: new Date(article.date).toISOString(),
+        author: {
+          "@type": "Person",
+          name: article.author,
+          jobTitle: article.authorRole,
+          worksFor: {
+            "@type": "Organization",
+            name: "Longview Capital",
+            url: "https://www.lvcapital.in",
+          },
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Longview Capital",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.lvcapital.in/images/logo-transparent.png",
+          },
+        },
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": `https://www.lvcapital.in/insights/${article.slug}`,
+        },
+        keywords: article.tags.join(", "),
+        articleSection: article.category,
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `https://www.lvcapital.in/insights/${article.slug}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://www.lvcapital.in",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Insights",
+            item: "https://www.lvcapital.in/insights",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: article.title,
+            item: `https://www.lvcapital.in/insights/${article.slug}`,
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <article className="relative bg-[#FAF8F5] min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       {/* Article Header */}
       <header className="pt-16 pb-16 bg-white border-b border-gold-border/60 relative overflow-hidden">
         <MountainMotif variant="watermark" className="right-0 top-0 opacity-15" />

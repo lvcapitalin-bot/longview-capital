@@ -15,10 +15,15 @@ interface FAQSectionProps {
 
 export const FAQSection: React.FC<FAQSectionProps> = ({
   title = "Frequently Asked Questions",
-  subtitle = "Clear, straightforward answers about how we work and how our research helps you.",
+  subtitle = "Clear, straightforward answers about fundamental equity research, our investment approach, and how we work with investors.",
   className = "",
 }) => {
+  const [activeCategory, setActiveCategory] = useState<"all" | "fundamental-research" | "working-with-us">("all");
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const filteredFaqs = FAQS_DATA.filter(
+    (faq) => activeCategory === "all" || faq.category === activeCategory
+  );
 
   const toggleIndex = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -32,9 +37,9 @@ export const FAQSection: React.FC<FAQSectionProps> = ({
     <section className={`py-16 md:py-20 ${className}`}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
-        <div className="text-center mb-10 space-y-2">
+        <div className="text-center mb-8 space-y-2">
           <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-gold block">
-            Common Questions
+            Knowledge &amp; Queries
           </span>
           <h2 className="text-3xl sm:text-4xl font-serif text-navy font-bold">
             {title}
@@ -45,9 +50,55 @@ export const FAQSection: React.FC<FAQSectionProps> = ({
           </p>
         </div>
 
+        {/* Category Filter Pills */}
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
+          <button
+            type="button"
+            onClick={() => {
+              setActiveCategory("all");
+              setOpenIndex(0);
+            }}
+            className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all ${
+              activeCategory === "all"
+                ? "bg-navy text-white shadow-sm"
+                : "bg-white text-warmgrey border border-gold-border/60 hover:text-navy hover:border-gold"
+            }`}
+          >
+            All Questions ({FAQS_DATA.length})
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setActiveCategory("fundamental-research");
+              setOpenIndex(0);
+            }}
+            className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all ${
+              activeCategory === "fundamental-research"
+                ? "bg-navy text-white shadow-sm"
+                : "bg-white text-warmgrey border border-gold-border/60 hover:text-navy hover:border-gold"
+            }`}
+          >
+            Fundamental Research (7)
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setActiveCategory("working-with-us");
+              setOpenIndex(0);
+            }}
+            className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all ${
+              activeCategory === "working-with-us"
+                ? "bg-navy text-white shadow-sm"
+                : "bg-white text-warmgrey border border-gold-border/60 hover:text-navy hover:border-gold"
+            }`}
+          >
+            Working With Us (6)
+          </button>
+        </div>
+
         {/* Accordion Container */}
         <div className="space-y-3.5">
-          {FAQS_DATA.map((faq, index) => {
+          {filteredFaqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
               <div

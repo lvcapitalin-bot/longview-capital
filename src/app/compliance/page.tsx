@@ -16,10 +16,37 @@ import { BRAND } from "@/data/brand";
 import { COMPLIANCE_INFO } from "@/data/compliance";
 import { MountainMotif } from "@/components/MountainMotif";
 
-export const metadata = {
-  title: "Regulatory Compliance & Disclosures | Longview Capital",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Compliance, Disclosures & Investor Charter | Longview Capital",
   description:
-    "SEBI regulatory disclosures, Investor Charter, Grievance Redressal Mechanism, SCORES link, and mandatory disclosures for Longview Capital.",
+    "Official regulatory disclosures, SEBI registration application status (in process), Grievance Redressal Mechanism (SCORES & SMART ODR), and Investor Charter of Longview Capital in Ahmedabad.",
+  keywords: [
+    "Longview Capital compliance",
+    "SEBI Research Analyst status",
+    "Grievance redressal procedure SCORES",
+    "SMART ODR portal India",
+    "Investor Charter research analyst",
+    "Compliance officer Harsh Nenwani",
+    "Grievance officer Sunny Nenwani"
+  ],
+  alternates: {
+    canonical: "https://www.lvcapital.in/compliance",
+  },
+  openGraph: {
+    title: "Compliance, Disclosures & Investor Charter | Longview Capital",
+    description: "Official regulatory disclosures, SEBI registration status, grievance redressal, and investor charter.",
+    url: "https://www.lvcapital.in/compliance",
+    type: "website",
+    images: ["/images/og-image.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Compliance, Disclosures & Investor Charter | Longview Capital",
+    description: "Official regulatory disclosures, grievance redressal, and investor charter.",
+    images: ["/images/og-image.jpg"],
+  },
 };
 
 export default function CompliancePage() {
