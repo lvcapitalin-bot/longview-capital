@@ -21,6 +21,15 @@ export async function POST(request: Request) {
       );
     }
 
+    // Anti-spam honeypot check
+    if (data.companyWeb) {
+      console.warn("[Spam Bot Blocked via Honeypot]", data.fullName, data.email);
+      return NextResponse.json({
+        success: true,
+        message: "Enquiry submitted successfully.",
+      });
+    }
+
     const leadInfo = {
       timestamp: new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
       formType: data.formType || "General Enquiry",
@@ -29,12 +38,34 @@ export async function POST(request: Request) {
       mobile: data.mobile,
       city: data.city || "Not Specified",
       interest: data.interest || "General",
+      investmentExperience: data.investmentExperience || "Not Specified",
       message: data.message || "None",
     };
 
     console.log("[Longview Capital Lead Received]", leadInfo);
 
-    // Optional Instant Telegram Lead Alert
+    // 1. Google Sheets Auto-Save Webhook
+    // Automatically appends a new row to Longview Capital's Google Sheet
+    const sheetsWebhookUrl =
+      process.env.GOOGLE_SHEETS_WEBHOOK_URL ||
+      process.env.GOOGLE_SHEET_WEBHOOK_URL;
+
+    if (sheetsWebhookUrl) {
+      try {
+        await fetch(sheetsWebhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(leadInfo),
+          redirect: "follow",
+        });
+        console.log("[Google Sheets] Lead successfully synced to Google Sheet");
+      } catch (sheetError) {
+        console.error("[Google Sheets Auto-Save Error]", sheetError);
+        // Never fail user submission if webhook has a temporary network glitch
+      }
+    }
+
+    // 2. Optional Instant Telegram Lead Alert
     // When TELEGRAM_BOT_TOKEN & TELEGRAM_CHAT_ID are set in .env.local,
     // Sunny & Harsh will receive an instant alert on their phone!
     const tgToken = process.env.TELEGRAM_BOT_TOKEN;
