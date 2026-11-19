@@ -1,6 +1,6 @@
-# Longview Capital — Boutique Investment Research & Wealth Advisory Website
+# Longview Capital — Investment Research & Wealth Advisory Platform
 
-A complete, production-ready, modern, and conversion-focused web platform built for **Longview Capital**, a boutique investment research and wealth advisory brand based in Ahmedabad, India.
+A complete, production-ready, modern, and conversion-focused web platform built for **Longview Capital**, an investment research and wealth advisory firm based in Ahmedabad, India.
 
 - **Website Domain**: [www.lvcapital.in](https://www.lvcapital.in)
 - **Official Email**: lvcapital.in@gmail.com
@@ -37,7 +37,7 @@ The platform is designed around the exact brand identity from the official Longv
    - Why Longview Capital?: 4 differentiators (Long-Term Thinking, Research-Driven Approach, Independent Perspective, Disciplined Investing).
    - Research Preview: Subscriptions cadence (2 regular reports/month, tactical notes, WhatsApp & Email delivery) + **Lead Capture: "Request Sample Research Report"**.
    - Brand Statement: *"We Think in Years, Not Days. Because wealth creation is a journey, not an event."*
-   - Leadership Section: Sunny Nenwani (Financial Advisor) & Harsh Nenwani (SEBI Registered Research Analyst) with direct contact triggers.
+   - Leadership Section: Sunny Nenwani (Financial Analyst) & Harsh Nenwani (Research Analyst) with direct contact triggers.
    - Final CTA & Institutional Footer.
 
 2. **About Us (`/about`)**:
