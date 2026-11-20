@@ -1,35 +1,9 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Cormorant_Garamond, Manrope, Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { FAQS_DATA } from "@/data/faqs";
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
-});
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-cormorant",
-  display: "swap",
-});
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Longview Capital | Fundamental Equity Research & Stock Advisory India",
@@ -148,7 +122,7 @@ export default function RootLayout({
           latitude: 23.0407987,
           longitude: 72.5186673,
         },
-        hasMap: "https://maps.google.com/?cid=1234567890",
+        hasMap: "https://share.google/plPQqs2RZ8KI2oewS",
         founder: [
           {
             "@type": "Person",
@@ -196,6 +170,7 @@ export default function RootLayout({
           "Long-term Wealth Compounding"
         ],
         sameAs: [
+          "https://share.google/plPQqs2RZ8KI2oewS",
           "https://wa.me/917984721288"
         ],
       },
@@ -229,11 +204,14 @@ export default function RootLayout({
   };
 
   return (
-    <html
-      lang="en"
-      className={`${playfair.variable} ${cormorant.variable} ${manrope.variable} ${inter.variable} scroll-smooth`}
-    >
+    <html lang="en" className="scroll-smooth">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+          rel="stylesheet"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

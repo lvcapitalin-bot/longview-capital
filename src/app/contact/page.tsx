@@ -73,6 +73,7 @@ export default function ContactPage() {
             postalCode: "380054",
             addressCountry: "IN",
           },
+          hasMap: "https://share.google/plPQqs2RZ8KI2oewS",
         },
       },
       {
@@ -228,12 +229,13 @@ export default function ContactPage() {
               </h3>
             </div>
             <a
-              href="https://maps.google.com/?q=Akash+Tower+Judges+Bunglow+Rd+Bodakdev+Ahmedabad+Gujarat+380054"
+              href="https://share.google/plPQqs2RZ8KI2oewS"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs font-bold text-gold-dark hover:underline flex items-center gap-1"
+              className="text-xs font-bold text-gold-dark hover:underline flex items-center gap-1.5 px-4 py-2 bg-white rounded-lg border border-gold-border/80 shadow-subtle hover:border-gold transition"
             >
-              <span>Open in Google Maps App &rarr;</span>
+              <MapPin className="w-4 h-4 text-gold shrink-0" />
+              <span>Open in Google Maps / Directions &rarr;</span>
             </a>
           </div>
 

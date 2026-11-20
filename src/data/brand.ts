@@ -45,7 +45,9 @@ export const BRAND = {
       country: "India",
       full: "5, First Floor, Akash Towers, Judges Bunglow Road, Bodakdev, Ahmedabad – 380054, Gujarat, India",
       mapEmbedUrl:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.5369796696956!2d72.51866737591632!3d23.04079871565576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84cb27f8a709%3A0x6b1429dd118d00ee!2sAkash%20Tower%2C%20Judges%20Bunglow%20Rd%2C%20Bodakdev%2C%20Ahmedabad%2C%20Gujarat%20380054!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+        "https://maps.google.com/maps?q=Longview+Capital,+Akash+Towers,+Judges+Bunglow+Rd,+Bodakdev,+Ahmedabad,+Gujarat+380054&t=&z=16&ie=UTF8&iwloc=&output=embed",
+      googleBusinessProfileUrl: "https://share.google/plPQqs2RZ8KI2oewS",
+      googleMapsDirectionsUrl: "https://share.google/plPQqs2RZ8KI2oewS",
     },
     email: "lvcapital.in@gmail.com",
     website: "www.lvcapital.in",

@@ -41,10 +41,10 @@ const config: Config = {
         },
       },
       fontFamily: {
-        serif: ["var(--font-cormorant)", "Cormorant Garamond", "Playfair Display", "Georgia", "serif"],
-        display: ["var(--font-playfair)", "Playfair Display", "Cormorant Garamond", "serif"],
-        sans: ["var(--font-manrope)", "Manrope", "Inter", "sans-serif"],
-        body: ["var(--font-inter)", "Inter", "Manrope", "sans-serif"],
+        serif: ["'Playfair Display'", "Georgia", "serif"],
+        display: ["'Playfair Display'", "Georgia", "serif"],
+        sans: ["'Manrope'", "'Inter'", "sans-serif"],
+        body: ["'Inter'", "'Manrope'", "sans-serif"],
       },
       boxShadow: {
         subtle: "0 2px 10px rgba(16, 37, 66, 0.04)",
