@@ -63,9 +63,9 @@ export default function HomePageClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-navy leading-[1.12] tracking-tight font-bold">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-navy leading-[1.15] tracking-tight font-bold">
               Invest With Perspective. <br />
-              <span className="gold-gradient-text italic font-normal">
+              <span className="text-[#C99532] font-serif font-bold inline-block pr-1">
                 Build Wealth With Purpose.
               </span>
             </h1>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -24,20 +24,16 @@ html {
 body {
   background-color: #FAF8F5;
   color: #102542;
-  font-family: 'Manrope', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Luxury Editorial Headings */
+/* Luxury Editorial Headings - Bold, Clear, Executive */
 h1, h2, h3, .font-serif-heading {
-  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
-  letter-spacing: -0.02em;
-}
-
-.font-editorial {
-  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
+  letter-spacing: -0.015em;
 }
 
 /* Custom Scrollbar */
@@ -60,6 +56,8 @@ h1, h2, h3, .font-serif-heading {
   background: linear-gradient(135deg, #A67822 0%, #C99532 50%, #D4A750 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding-right: 0.15em;
 }
 
 .gold-gradient-bg {
