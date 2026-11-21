@@ -111,7 +111,7 @@ export default function RootLayout({
         ],
         address: {
           "@type": "PostalAddress",
-          streetAddress: "5, First Floor, Akash Towers, Judges Bunglow Road, Bodakdev",
+          streetAddress: "First Floor, Akash Towers, 5., Judges Bungalow Rd, Bodakdev",
           addressLocality: "Ahmedabad",
           addressRegion: "Gujarat",
           postalCode: "380054",
@@ -119,10 +119,11 @@ export default function RootLayout({
         },
         geo: {
           "@type": "GeoCoordinates",
-          latitude: 23.0407987,
-          longitude: 72.5186673,
+          latitude: 23.0355544,
+          longitude: 72.5197583,
         },
-        hasMap: "https://share.google/plPQqs2RZ8KI2oewS",
+        hasMap:
+          "https://www.google.com/maps/place/Longview+Capital/@23.0355544,72.5197583,17z/data=!3m1!4b1!4m6!3m5!1s0x395e9b66da621e51:0x40ab133bd4f6086d!8m2!3d23.0355544!4d72.5197583!16s%2Fg%2F11_1n4tqb5",
         founder: [
           {
             "@type": "Person",
@@ -170,6 +171,7 @@ export default function RootLayout({
           "Long-term Wealth Compounding"
         ],
         sameAs: [
+          "https://www.google.com/maps/place/Longview+Capital/@23.0355544,72.5197583,17z/data=!3m1!4b1!4m6!3m5!1s0x395e9b66da621e51:0x40ab133bd4f6086d!8m2!3d23.0355544!4d72.5197583!16s%2Fg%2F11_1n4tqb5",
           "https://share.google/plPQqs2RZ8KI2oewS",
           "https://wa.me/917984721288"
         ],

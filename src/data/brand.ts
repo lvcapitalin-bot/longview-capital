@@ -37,17 +37,25 @@ export const BRAND = {
   
   contact: {
     address: {
-      line1: "5, First Floor, Akash Towers",
-      line2: "Judges Bunglow Road, Bodakdev",
+      line1: "First Floor, Akash Towers, 5.",
+      line2: "Judges Bungalow Rd, Bodakdev",
       city: "Ahmedabad",
       pincode: "380054",
       state: "Gujarat",
       country: "India",
-      full: "5, First Floor, Akash Towers, Judges Bunglow Road, Bodakdev, Ahmedabad – 380054, Gujarat, India",
+      full: "First Floor, Akash Towers, 5., Judges Bungalow Rd, Bodakdev, Ahmedabad – 380054, Gujarat, India",
+      plusCode: "2GP9+6W Ahmedabad, Gujarat",
+      coordinates: {
+        lat: 23.0355544,
+        lng: 72.5197583,
+      },
       mapEmbedUrl:
-        "https://maps.google.com/maps?q=Longview+Capital,+Akash+Towers,+Judges+Bunglow+Rd,+Bodakdev,+Ahmedabad,+Gujarat+380054&t=&z=16&ie=UTF8&iwloc=&output=embed",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.6888496464525!2d72.51718337591617!3d23.035554375658686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b66da621e51%3A0x40ab133bd4f6086d!2sLongview%20Capital!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin",
+      googleMapsPlaceUrl:
+        "https://www.google.com/maps/place/Longview+Capital/@23.0355544,72.5197583,17z/data=!3m1!4b1!4m6!3m5!1s0x395e9b66da621e51:0x40ab133bd4f6086d!8m2!3d23.0355544!4d72.5197583!16s%2Fg%2F11_1n4tqb5",
+      googleMapsDirectionsUrl:
+        "https://www.google.com/maps/dir//Longview+Capital,+First+Floor,+Akash+Towers,+5,+Judges+Bungalow+Rd,+Bodakdev,+Ahmedabad,+Gujarat+380054/@23.0355544,72.5197583,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x395e9b66da621e51:0x40ab133bd4f6086d!2m2!1d72.5197583!2d23.0355544",
       googleBusinessProfileUrl: "https://share.google/plPQqs2RZ8KI2oewS",
-      googleMapsDirectionsUrl: "https://share.google/plPQqs2RZ8KI2oewS",
     },
     email: "lvcapital.in@gmail.com",
     website: "www.lvcapital.in",
