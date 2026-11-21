@@ -60,15 +60,17 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=man2", sizes: "48x48" },
-      { url: "/favicon-48x48.png?v=man2", sizes: "48x48", type: "image/png" },
-      { url: "/favicon-96x96.png?v=man2", sizes: "96x96", type: "image/png" },
-      { url: "/favicon-192x192.png?v=man2", sizes: "192x192", type: "image/png" },
-      { url: "/favicon.png?v=man2", sizes: "192x192", type: "image/png" },
+      { url: "/favicon.ico?v=symbol", sizes: "48x48" },
+      { url: "/favicon-32x32.png?v=symbol", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png?v=symbol", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-48x48.png?v=symbol", sizes: "48x48", type: "image/png" },
+      { url: "/favicon-96x96.png?v=symbol", sizes: "96x96", type: "image/png" },
+      { url: "/favicon-192x192.png?v=symbol", sizes: "192x192", type: "image/png" },
+      { url: "/favicon.png?v=symbol", sizes: "192x192", type: "image/png" },
     ],
-    shortcut: "/favicon.ico?v=man2",
+    shortcut: "/favicon.ico?v=symbol",
     apple: [
-      { url: "/apple-icon.png?v=man2", sizes: "180x180", type: "image/png" },
+      { url: "/apple-icon.png?v=symbol", sizes: "180x180", type: "image/png" },
     ],
   },
 };
