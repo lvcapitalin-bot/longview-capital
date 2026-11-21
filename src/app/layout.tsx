@@ -60,15 +60,15 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "48x48" },
-      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
-      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-      { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png" },
-      { url: "/favicon.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon.ico?v=man2", sizes: "48x48" },
+      { url: "/favicon-48x48.png?v=man2", sizes: "48x48", type: "image/png" },
+      { url: "/favicon-96x96.png?v=man2", sizes: "96x96", type: "image/png" },
+      { url: "/favicon-192x192.png?v=man2", sizes: "192x192", type: "image/png" },
+      { url: "/favicon.png?v=man2", sizes: "192x192", type: "image/png" },
     ],
-    shortcut: "/favicon.ico",
+    shortcut: "/favicon.ico?v=man2",
     apple: [
-      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/apple-icon.png?v=man2", sizes: "180x180", type: "image/png" },
     ],
   },
 };
