@@ -15,6 +15,7 @@ export const CompoundingVisualizer: React.FC<{ onConsultClick?: () => void }> = 
   const multiple = (futureValue / initialCapital).toFixed(1);
   const fdValue = Math.round(initialCapital * Math.pow(1 + 0.07, years)); // 7% Bank FD
   const extraWealth = futureValue - fdValue;
+  const fdOutperformancePct = Math.round(((futureValue - fdValue) / fdValue) * 100);
 
   // Data points for SVG chart
   const dataPoints = Array.from({ length: years + 1 }, (_, i) => ({
@@ -81,16 +82,22 @@ export const CompoundingVisualizer: React.FC<{ onConsultClick?: () => void }> = 
                 <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-powder/75 block">
                   FD (7%)
                 </span>
-                <span className="text-xs sm:text-sm font-serif font-semibold text-powder">
+                <span className="text-xs sm:text-sm font-serif font-semibold text-powder block leading-tight">
                   {formatINR(fdValue)}
+                </span>
+                <span className="text-[9px] sm:text-[10px] text-powder/60 block leading-tight mt-0.5">
+                  {(fdValue / initialCapital).toFixed(1)}x
                 </span>
               </div>
               <div className="pl-3 border-l border-white/15">
                 <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-emerald-300 block">
                   Extra Gain
                 </span>
-                <span className="text-xs sm:text-sm font-serif font-bold text-emerald-400">
+                <span className="text-xs sm:text-sm font-serif font-bold text-emerald-400 block leading-tight">
                   +{formatINR(extraWealth)}
+                </span>
+                <span className="text-[9px] sm:text-[10px] font-semibold text-emerald-300/90 block leading-tight mt-0.5 whitespace-nowrap">
+                  +{fdOutperformancePct}% vs FD
                 </span>
               </div>
             </div>
